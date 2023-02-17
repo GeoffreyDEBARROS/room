@@ -1,0 +1,84 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "League Spartan", sans-serif;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+
+header {
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 45% 55%;
+}
+
+.topHead {
+  background: url(/assets/images/mobile-image-hero-1.jpg) center/cover;
+  position: relative;
+  transition: 0.5s;
+}
+.topHead nav {
+  height: 40px;
+  position: relative;
+  padding: 20px;
+}
+.topHead nav .burger-button {
+  position: absolute;
+  top: 42px;
+}
+.topHead nav h1 {
+  color: hsl(0deg, 0%, 100%);
+  text-transform: lowercase;
+  position: absolute;
+  top: 35px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-weight: 300;
+  font-size: 2rem;
+}
+.topHead .head-button {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background: black;
+}
+.topHead .head-button button {
+  height: 55px;
+  width: 55px;
+  background: black;
+  border: none;
+  transition: 0.2s;
+}
+.topHead .head-button :active {
+  background: hsl(0deg, 0%, 27%);
+}
+
+.bottomHead {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 45px 20px;
+}
+.bottomHead h2 {
+  font-size: 2.42rem;
+}
+.bottomHead p {
+  line-height: 23px;
+  color: hsl(0deg, 0%, 63%);
+  font-size: 1.1rem;
+}
+.bottomHead button {
+  border: none;
+  background: none;
+  letter-spacing: 10px;
+  text-transform: uppercase;
+  text-align: left;
+  font-size: 1.2em;
+  font-weight: 600;
+}
+.bottomHead button :active {
+  color: hsl(0deg, 0%, 63%);
+}/*# sourceMappingURL=index.css.map */

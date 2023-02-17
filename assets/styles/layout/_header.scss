@@ -1,0 +1,76 @@
+header {
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 45% 55%;
+}
+.topHead {
+    background: url(/assets/images/mobile-image-hero-1.jpg) center/cover;
+    position: relative;
+    transition: 0.5s;
+
+    nav {
+        height: 40px;
+        position: relative;
+        padding: 20px;
+
+            .burger-button {
+                position: absolute;
+                top: 42px;
+            }
+
+            h1 {
+                color: hsl(0, 0%, 100%);
+                text-transform: lowercase;
+                position: absolute;
+                top: 35px;
+                left: 50%;
+                transform: translateX(-50%);
+                font-weight: 300;
+                font-size: 2rem;
+            }
+    }
+
+    .head-button {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        background: black;
+            button {
+                height: 55px;
+                width: 55px;
+                background: black;
+                border: none;
+                transition: 0.2s;
+            }
+            :active {
+                background: hsl(0, 0%, 27%);
+            }
+    }
+}
+
+.bottomHead {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 45px 20px;
+     h2 {
+        font-size: 2.42rem;
+     }
+     p {
+        line-height: 23px;
+        color: hsl(0, 0%, 63%);
+        font-size: 1.1rem;
+     }
+     button {
+        border: none;
+        background: none;
+        letter-spacing: 10px;
+        text-transform: uppercase;
+        text-align: left;
+        font-size: 1.2em;
+        font-weight: 600;
+            :active {
+                color: hsl(0, 0%, 63%);
+            }
+     }
+}
