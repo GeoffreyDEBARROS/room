@@ -62,13 +62,17 @@ header {
   justify-content: space-around;
   padding: 45px 20px;
 }
-.bottomHead h2 {
+.bottomHead .swap-part h2, .bottomHead .swap-part2 h2, .bottomHead .swap-part3 h2 {
   font-size: 2.42rem;
+  padding-bottom: 15px;
 }
-.bottomHead p {
+.bottomHead .swap-part p, .bottomHead .swap-part2 p, .bottomHead .swap-part3 p {
   line-height: 23px;
   color: hsl(0deg, 0%, 63%);
   font-size: 1.1rem;
+}
+.bottomHead .swap-part2, .bottomHead .swap-part3 {
+  display: none;
 }
 .bottomHead button {
   border: none;
