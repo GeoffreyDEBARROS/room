@@ -4,7 +4,7 @@ header {
     grid-template-rows: 45% 55%;
 }
 .topHead {
-    background: url(/assets/images/mobile-image-hero-1.jpg) center/cover;
+    background: url(/assets/images/mobile-image-hero-1.jpg);
     position: relative;
     transition: 0.5s;
 
@@ -17,7 +17,34 @@ header {
                 position: absolute;
                 top: 42px;
             }
-
+            .menu {
+                position: absolute;
+                background: hsl(0, 0%, 100%);
+                top: 0;
+                right: 0;
+                height: 90px;
+                width: 100vw;
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+                z-index: 5;
+                visibility: hidden;
+                .cross-button {
+                    position: absolute;
+                    left: 30px;
+                }
+                ul {
+                    display: flex;
+                    li {
+                        padding: 15px;
+                        font-size: 1.2rem;
+                        color: black;
+                            :active {
+                                color: hsl(0, 0%, 27%);
+                            }
+                    }
+                }            
+            }
             h1 {
                 color: hsl(0, 0%, 100%);
                 text-transform: lowercase;
@@ -80,3 +107,31 @@ header {
                 }
             }
 }
+
+section {
+    display: grid;
+    grid-template-rows: 30% 40% 30%;
+        .sect-img {
+            img {
+                width: 100vw;
+            }
+        }
+        article {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: space-around;
+            padding: 45px 20px;
+            h4 {
+                text-transform: uppercase;
+                padding-bottom: 20px;
+                letter-spacing: 5px;
+            }
+            p {
+                line-height: 23px;
+                color: hsl(0, 0%, 63%);
+                font-size: 1.1rem;
+            }
+        }
+}
+

@@ -1,3 +1,6 @@
+let btnOpen = document.querySelector(".burger-button");
+let btnClose = document.querySelector(".cross-button");
+let nav = document.querySelector(".menu");
 let leftButton = document.getElementById("left");
 let rightButton = document.getElementById("right");
 let topHead = document.querySelector(".topHead");
@@ -18,7 +21,6 @@ const pArray = [
   "With stores all over the world, it's easy for you to find furniture for your home or place of business. Locally, we’re in most major cities throughout the country. Find the branch nearest you using our store locator. Any questions? Don't hesitate to contact us today.",
   "Our modern furniture store provide a high level of quality. Our company has invested in advanced technology to ensure that every product is made as perfect and as consistent as possible. With three decades of experience in this industry, we understand what customers want for their home and office.",
 ];
-
 let i = 0;
 const headerChangeLeft = () => {
   i = (i + 1) % 3;
@@ -36,7 +38,6 @@ const headerChangeLeft = () => {
   topHead.style.backgroundSize = "cover";
   h2.textContent = h2Array[i];
   headerP.textContent = pArray[i];
-  console.log(i);
 };
 
 const headerChangeRight = () => {
@@ -57,7 +58,6 @@ const headerChangeRight = () => {
   topHead.style.background = `url(./assets/images/${bgArray[i]})`;
   h2.textContent = h2Array[i];
   headerP.textContent = pArray[i];
-  console.log(i);
 };
 
 leftButton.addEventListener("click", () => {
@@ -67,4 +67,10 @@ rightButton.addEventListener("click", () => {
   headerChangeRight();
 });
 
+btnOpen.addEventListener("click", () => {
+  nav.style.visibility = "visible";
+});
 
+btnClose.addEventListener("click", () => {
+    nav.style.visibility = "hidden";
+})
