@@ -4,7 +4,8 @@ header {
     grid-template-rows: 45% 55%;
 }
 .topHead {
-    background: url(/assets/images/mobile-image-hero-1.jpg);
+    background: url(/assets/images/mobile-image-hero-1.jpg) center/cover;
+
     position: relative;
     transition: 0.5s;
 
@@ -35,6 +36,7 @@ header {
                 }
                 ul {
                     display: flex;
+                    color: black;
                     li {
                         padding: 15px;
                         font-size: 1.2rem;

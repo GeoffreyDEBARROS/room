@@ -18,7 +18,7 @@ header {
 }
 
 .topHead {
-  background: url(/assets/images/mobile-image-hero-1.jpg);
+  background: url(/assets/images/mobile-image-hero-1.jpg) center/cover;
   position: relative;
   transition: 0.5s;
 }
@@ -50,6 +50,7 @@ header {
 }
 .topHead nav .menu ul {
   display: flex;
+  color: black;
 }
 .topHead nav .menu ul li {
   padding: 15px;
