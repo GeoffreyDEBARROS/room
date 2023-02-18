@@ -36,14 +36,16 @@ header {
                 }
                 ul {
                     display: flex;
-                    color: black;
                     li {
                         padding: 15px;
                         font-size: 1.2rem;
-                        color: black;
-                            :active {
-                                color: hsl(0, 0%, 27%);
+                            a {
+                                color: black;
+                                :active {
+                                    color: hsl(0, 0%, 27%);
+                                }
                             }
+                            
                     }
                 }            
             }

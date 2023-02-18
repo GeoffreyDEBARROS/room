@@ -50,14 +50,15 @@ header {
 }
 .topHead nav .menu ul {
   display: flex;
-  color: black;
 }
 .topHead nav .menu ul li {
   padding: 15px;
   font-size: 1.2rem;
+}
+.topHead nav .menu ul li a {
   color: black;
 }
-.topHead nav .menu ul li :active {
+.topHead nav .menu ul li a :active {
   color: hsl(0deg, 0%, 27%);
 }
 .topHead nav h1 {
