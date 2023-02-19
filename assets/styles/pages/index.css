@@ -11,16 +11,34 @@
   text-decoration: none;
 }
 
+@media screen and (min-width: 1000px) {
+  body {
+    height: 100vh;
+  }
+}
+
 header {
   height: 100vh;
   display: grid;
   grid-template-rows: 45% 55%;
+}
+@media screen and (min-width: 1000px) {
+  header {
+    height: 57vh;
+    grid-template-columns: 59% 41%;
+    grid-template-rows: auto;
+  }
 }
 
 .topHead {
   background: url(/assets/images/mobile-image-hero-1.jpg) center/cover;
   position: relative;
   transition: 0.5s;
+}
+@media screen and (min-width: 1000px) {
+  .topHead {
+    background: url(/assets/images/desktop-image-hero-1.jpg) center/cover;
+  }
 }
 .topHead nav {
   height: 40px;
@@ -30,6 +48,11 @@ header {
 .topHead nav .burger-button {
   position: absolute;
   top: 42px;
+}
+@media screen and (min-width: 1000px) {
+  .topHead nav .burger-button {
+    display: none;
+  }
 }
 .topHead nav .menu {
   position: absolute;
@@ -44,9 +67,23 @@ header {
   z-index: 5;
   visibility: hidden;
 }
+@media screen and (min-width: 1000px) {
+  .topHead nav .menu {
+    visibility: visible;
+    background: none;
+    width: 100%;
+    justify-content: flex-start;
+    padding-left: 155px;
+  }
+}
 .topHead nav .menu .cross-button {
   position: absolute;
   left: 30px;
+}
+@media screen and (min-width: 1000px) {
+  .topHead nav .menu .cross-button {
+    display: none;
+  }
 }
 .topHead nav .menu ul {
   display: flex;
@@ -54,9 +91,25 @@ header {
 .topHead nav .menu ul li {
   padding: 15px;
   font-size: 1.2rem;
+  position: relative;
+}
+.topHead nav .menu ul li :hover:after {
+  position: absolute;
+  content: "";
+  width: 20px;
+  height: 3px;
+  background: white;
+  left: 50%;
+  transform: translate(-50%, -5px);
 }
 .topHead nav .menu ul li a {
   color: black;
+}
+@media screen and (min-width: 1000px) {
+  .topHead nav .menu ul li a {
+    color: white;
+    font-size: 1rem;
+  }
 }
 .topHead nav .menu ul li a :active {
   color: hsl(0deg, 0%, 27%);
@@ -71,11 +124,22 @@ header {
   font-weight: 300;
   font-size: 2rem;
 }
+@media screen and (min-width: 1000px) {
+  .topHead nav h1 {
+    left: 100px;
+    top: 31px;
+  }
+}
 .topHead .head-button {
   position: absolute;
   bottom: 0;
   right: 0;
   background: black;
+}
+@media screen and (min-width: 1000px) {
+  .topHead .head-button {
+    right: -114px;
+  }
 }
 .topHead .head-button button {
   height: 55px;
@@ -83,6 +147,7 @@ header {
   background: black;
   border: none;
   transition: 0.2s;
+  cursor: pointer;
 }
 .topHead .head-button :active {
   background: hsl(0deg, 0%, 27%);
@@ -93,6 +158,11 @@ header {
   flex-direction: column;
   justify-content: space-around;
   padding: 45px 20px;
+}
+@media screen and (min-width: 1000px) {
+  .bottomHead {
+    padding: 70px;
+  }
 }
 .bottomHead .swap-part h2, .bottomHead .swap-part2 h2, .bottomHead .swap-part3 h2 {
   font-size: 2.42rem;
@@ -114,6 +184,7 @@ header {
   text-align: left;
   font-size: 1.2em;
   font-weight: 600;
+  cursor: pointer;
 }
 .bottomHead button :active {
   color: hsl(0deg, 0%, 63%);
@@ -123,8 +194,14 @@ section {
   display: grid;
   grid-template-rows: 30% 40% 30%;
 }
+@media screen and (min-width: 1000px) {
+  section {
+    grid-template-columns: 30% 40% 30%;
+    grid-template-rows: auto;
+  }
+}
 section .sect-img img {
-  width: 100vw;
+  width: 100%;
 }
 section article {
   display: flex;
@@ -132,6 +209,12 @@ section article {
   align-items: flex-start;
   justify-content: space-around;
   padding: 45px 20px;
+}
+@media screen and (min-width: 1000px) {
+  section article {
+    justify-content: center;
+    padding: 50px;
+  }
 }
 section article h4 {
   text-transform: uppercase;

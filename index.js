@@ -11,6 +11,11 @@ const bgArray = [
   "mobile-image-hero-2.jpg",
   "mobile-image-hero-3.jpg",
 ];
+const bgDesktopArray = [
+  "desktop-image-hero-1.jpg",
+  "desktop-image-hero-2.jpg",
+  "desktop-image-hero-3.jpg",
+];
 const h2Array = [
   "Discover innovative ways to decorate",
   "We are available all across the globe",
@@ -25,7 +30,8 @@ const pArray = [
 let i = 0;
 const headerChangeLeft = () => {
   i = (i + 1) % 3;
-  topHead.style.background = `url(./assets/images/${bgArray[i]})`;
+  const bg = window.innerWidth > 1000 ? bgDesktopArray : bgArray;
+  topHead.style.background = `url(./assets/images/${bg[i]})`;
   topHead.style.backgroundPosition = "center";
   topHead.style.backgroundSize = "cover";
   h2.textContent = h2Array[i];
@@ -37,7 +43,8 @@ const headerChangeRight = () => {
   if (i < 0) {
     i = 3 - 1;
   }
-  topHead.style.background = `url(./assets/images/${bgArray[i]})`;
+  const bg = window.innerWidth > 1000 ? bgDesktopArray : bgArray;
+  topHead.style.background = `url(./assets/images/${bg[i]})`;
   topHead.style.backgroundPosition = "center";
   topHead.style.backgroundSize = "cover";
   h2.textContent = h2Array[i];
@@ -51,12 +58,13 @@ rightButton.addEventListener("click", () => {
   headerChangeRight();
 });
 
-
 // Navigation click event
 btnOpen.addEventListener("click", () => {
   nav.style.visibility = "visible";
 });
 
 btnClose.addEventListener("click", () => {
-    nav.style.visibility = "hidden";
-})
+  nav.style.visibility = "hidden";
+});
+
+
